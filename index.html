@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ASHWOOD</title>
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 <div id="game">
@@ -12,14 +12,14 @@
   <main id="screen">
     <section id="titleScreen" class="panel active"><div class="grain"></div><p class="eyebrow">A PLAYABLE MYSTERY</p><h1>ASHWOOD</h1><p class="tagline">Some memories are better left buried.</p><button id="startBtn" type="button">BEGIN</button></section>
     <section id="characterScreen" class="panel"><h2>Before you return...</h2><p>You remember almost nothing about why you left Ashwood.</p><label>Your name <input id="playerName" maxlength="18" placeholder="Your name"></label><p class="small">Choose who your neighbor will be.</p><div class="choices"><button type="button" data-gender="boy">BOY</button><button type="button" data-gender="girl">GIRL</button></div><button id="continueCharacter" type="button">CONTINUE</button></section>
-    <section id="worldScreen" class="panel worldPanel"><canvas id="world" aria-label="Ashwood playable map"></canvas><div id="worldHint">WASD / ARROWS to move • E to interact</div></section>
+    <section id="worldScreen" class="panel worldPanel"><canvas id="world" aria-label="Ashwood 3D playable neighborhood"></canvas><div id="worldHint">WASD / ARROWS to move • E to interact</div></section>
     <section id="sceneScreen" class="panel"><div id="sceneText"></div><div id="choices"></div></section>
     <section id="memoryScreen" class="panel"><p class="eyebrow">MEMORY FRAGMENT</p><div id="memoryText"></div><button id="returnParty" type="button">RETURN TO THE PARTY</button></section>
     <section id="boardScreen" class="panel"><div class="boardHead"><h2>CASE FILE</h2><button id="closeBoard" type="button">CLOSE</button></div><div class="boardGrid"><div><h3>NOTEBOOK</h3><div id="notebook"></div></div><div><h3>EVIDENCE</h3><div id="evidence"></div></div></div></section>
   </main>
   <div id="controls"><button id="boardBtn" type="button" disabled>CASE FILE</button><span>WASD / ARROWS: move • E: interact</span></div><div id="toast"></div>
 </div>
-<script src="game.js?v=7"></script>
-<script src="visuals.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.min.js"></script>
+<script src="game.js?v=8"></script>
 </body>
 </html>
