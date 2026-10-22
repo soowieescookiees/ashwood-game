@@ -4,7 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ASHWOOD</title>
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="style.css?v=14">
+<style>
+.cutsceneArt{height:230px;position:relative;overflow:hidden;border:1px solid #403a31;background:#101216;margin-bottom:18px;box-shadow:inset 0 0 60px rgba(0,0,0,.7)}
+.cutsceneSky{position:absolute;inset:0;background:linear-gradient(#07101a 0%,#182637 48%,#11120f 49%,#080908 100%)}
+.cutsceneObject{position:absolute;left:10%;right:10%;bottom:18%;height:18%;background:#20252a;box-shadow:0 30px 0 #111;transform:perspective(300px) rotateX(18deg)}
+.cutsceneTag{position:absolute;left:18px;top:16px;background:rgba(0,0,0,.72);padding:7px 10px;font-size:11px;letter-spacing:2px;color:#ddd}
+.cutsceneCopy{max-width:720px;margin:0 auto 18px;line-height:1.7}.signQuote{font-size:26px;letter-spacing:4px;text-align:center;font-weight:700}.road .cutsceneObject{background:linear-gradient(90deg,transparent 0 43%,#d8c48b 44% 56%,transparent 57%);height:35%;bottom:0}.sign .cutsceneObject{left:32%;right:32%;bottom:17%;height:45%;background:#6b4b32;box-shadow:0 45px 0 #34251b}.street .cutsceneObject{left:0;right:0;bottom:0;height:38%;background:linear-gradient(90deg,#303338 0 18%,#151618 18% 80%,#303338 80%)}.house .cutsceneObject{left:30%;right:30%;bottom:8%;height:58%;background:#5a463d;box-shadow:inset 0 0 0 12px #362c29}.stairs .cutsceneObject{left:30%;right:30%;bottom:0;height:80%;background:repeating-linear-gradient(170deg,#765943 0 13px,#3b2b24 14px 22px)}.window .cutsceneObject{left:36%;right:36%;bottom:12%;height:65%;background:linear-gradient(90deg,#18202b 0 47%,#d6a65c 48% 52%,#18202b 53%)}.neighbor .cutsceneObject{left:47%;right:47%;bottom:10%;height:65%;background:#4a3443;box-shadow:22px 0 0 #21191e,-22px 0 0 #21191e}.school .cutsceneSky{background:linear-gradient(#7ca1bc,#dce0d5 58%,#899181 59%)}.school .cutsceneObject{left:20%;right:20%;bottom:12%;height:52%;background:#5a5d61;box-shadow:inset 0 20px 0 #303338}
+.dialogue{border-left:3px solid #a8794d;padding:8px 14px;margin:12px 0;background:rgba(255,255,255,.025)}.speaker{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c6a57d;margin-bottom:4px}
+</style>
 </head>
 <body>
 <div id="game">
@@ -12,13 +20,10 @@
   <main id="screen">
     <section id="titleScreen" class="panel active"><div class="grain"></div><p class="eyebrow">A PLAYABLE MYSTERY</p><h1>ASHWOOD</h1><p class="tagline">Some memories are better left buried.</p><button id="startBtn" type="button">BEGIN</button></section>
     <section id="characterScreen" class="panel">
-      <p class="eyebrow">CREATE YOUR CHARACTER</p>
-      <h2>Who are you?</h2>
-      <p><strong>CLICK YOUR CHARACTER GENDER (PROTAGONIST)</strong></p>
+      <p class="eyebrow">CREATE YOUR CHARACTER</p><h2>Who are you?</h2><p><strong>CLICK YOUR CHARACTER GENDER (PROTAGONIST)</strong></p>
       <label>Your name <input id="playerName" maxlength="18" placeholder="Your name"></label>
       <div id="protagonistChoices" class="choices"><button type="button" data-gender="boy">BOY</button><button type="button" data-gender="girl">GIRL</button></div>
-      <p class="small">Now choose your neighbor's gender.</p>
-      <div id="neighborChoices" class="choices"><button type="button" data-gender="boy">BOY</button><button type="button" data-gender="girl">GIRL</button></div>
+      <p class="small">Now choose your neighbor's gender.</p><div id="neighborChoices" class="choices"><button type="button" data-gender="boy">BOY</button><button type="button" data-gender="girl">GIRL</button></div>
       <button id="continueCharacter" type="button" disabled>CONTINUE</button>
     </section>
     <section id="worldScreen" class="panel worldPanel"><canvas id="world" aria-label="Ashwood 3D playable neighborhood"></canvas><div id="worldHint">WASD / ARROWS • MOVE &nbsp; E • INTERACT</div></section>
@@ -26,8 +31,8 @@
     <section id="memoryScreen" class="panel"><p class="eyebrow">MEMORY FRAGMENT</p><div id="memoryText"></div><button id="returnParty" type="button">RETURN TO THE PARTY</button></section>
     <section id="boardScreen" class="panel"><div class="boardHead"><h2>CASE FILE</h2><button id="closeBoard" type="button">CLOSE</button></div><div class="boardGrid"><div><h3>NOTEBOOK</h3><div id="notebook"></div></div><div><h3>EVIDENCE</h3><div id="evidence"></div></div></div></section>
   </main>
-  <div id="controls"><button id="boardBtn" type="button" disabled>CASE FILE</button><span>WASD / ARROWS: move • E: interact</span></div><div id="toast"></div>
+  <div id="controls"><button id="boardBtn" type="button" disabled>CASE FILE</button><span>WASD / ARROWS: move • E: interact • N: day/night</span></div><div id="toast"></div>
 </div>
-<script src="game.js?v=13"></script>
+<script src="game.js?v=14"></script>
 </body>
 </html>
