@@ -8,69 +8,16 @@
 </head>
 <body>
 <div id="game">
-  <div id="hud">
-    <div class="title">ASHWOOD</div>
-    <div id="objective">October 31 • Halloween Night</div>
-    <div id="clueCount">Clues: 0</div>
-  </div>
-
+  <div id="hud"><div class="title">ASHWOOD</div><div id="objective">October 31 • Halloween Night</div><div id="clueCount">Clues: 0</div></div>
   <main id="screen">
-    <section id="titleScreen" class="panel active">
-      <div class="grain"></div>
-      <p class="eyebrow">A FIRST-PERSON MYSTERY</p>
-      <h1>ASHWOOD</h1>
-      <p class="tagline">Some memories are better left buried.</p>
-      <button id="startBtn">BEGIN</button>
-    </section>
-
-    <section id="characterScreen" class="panel">
-      <h2>Before you return...</h2>
-      <p>You remember almost nothing about why you left Ashwood.</p>
-      <label>Your name <input id="playerName" maxlength="18" placeholder="Your name"></label>
-      <p class="small">Choose who your neighbor will be.</p>
-      <div class="choices">
-        <button data-gender="boy">BOY</button>
-        <button data-gender="girl">GIRL</button>
-      </div>
-      <button id="continueCharacter" disabled>CONTINUE</button>
-    </section>
-
-    <section id="sceneScreen" class="panel">
-      <div id="sceneText"></div>
-      <div id="choices"></div>
-    </section>
-
-    <section id="memoryScreen" class="panel">
-      <p class="eyebrow">MEMORY FRAGMENT</p>
-      <div id="memoryText"></div>
-      <button id="returnParty">RETURN TO THE PARTY</button>
-    </section>
-
-    <section id="boardScreen" class="panel">
-      <div class="boardHead">
-        <h2>CASE FILE</h2>
-        <button id="closeBoard">CLOSE</button>
-      </div>
-      <div class="boardGrid">
-        <div>
-          <h3>NOTEBOOK</h3>
-          <div id="notebook"></div>
-        </div>
-        <div>
-          <h3>EVIDENCE</h3>
-          <div id="evidence"></div>
-        </div>
-      </div>
-    </section>
+    <section id="titleScreen" class="panel active"><div class="grain"></div><p class="eyebrow">A FIRST-PERSON MYSTERY</p><h1>ASHWOOD</h1><p class="tagline">Some memories are better left buried.</p><button id="startBtn" type="button">BEGIN</button></section>
+    <section id="characterScreen" class="panel"><h2>Before you return...</h2><p>You remember almost nothing about why you left Ashwood.</p><label>Your name <input id="playerName" maxlength="18" placeholder="Your name"></label><p class="small">Choose who your neighbor will be.</p><div class="choices"><button type="button" data-gender="boy">BOY</button><button type="button" data-gender="girl">GIRL</button></div><button id="continueCharacter" type="button">CONTINUE</button></section>
+    <section id="sceneScreen" class="panel"><div id="sceneText"></div><div id="choices"></div></section>
+    <section id="memoryScreen" class="panel"><p class="eyebrow">MEMORY FRAGMENT</p><div id="memoryText"></div><button id="returnParty" type="button">RETURN TO THE PARTY</button></section>
+    <section id="boardScreen" class="panel"><div class="boardHead"><h2>CASE FILE</h2><button id="closeBoard" type="button">CLOSE</button></div><div class="boardGrid"><div><h3>NOTEBOOK</h3><div id="notebook"></div></div><div><h3>EVIDENCE</h3><div id="evidence"></div></div></div></section>
   </main>
-
-  <div id="controls">
-    <button id="boardBtn" disabled>CASE FILE</button>
-    <span>WASD / ARROWS: move • E: interact</span>
-  </div>
-
-  <div id="toast"></div>
+  <div id="controls"><button id="boardBtn" type="button" disabled>CASE FILE</button><span>WASD / ARROWS: move • E: interact</span></div><div id="toast"></div>
 </div>
-<script src="game.js"></script>
+<script src="game.js?v=3"></script>
 </body>
 </html>
