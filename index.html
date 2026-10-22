@@ -4,14 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ASHWOOD</title>
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 <div id="game">
   <div id="hud"><div class="title">ASHWOOD</div><div id="objective">October • Welcome back to Ashwood</div><div id="clueCount">Clues: 0</div></div>
   <main id="screen">
     <section id="titleScreen" class="panel active"><div class="grain"></div><p class="eyebrow">A PLAYABLE MYSTERY</p><h1>ASHWOOD</h1><p class="tagline">Some memories are better left buried.</p><button id="startBtn" type="button">BEGIN</button></section>
-    <section id="characterScreen" class="panel"><h2>Create your character</h2><p>Before you return to Ashwood, decide who you will play as.</p><label>Your name <input id="playerName" maxlength="18" placeholder="Your name"></label><p class="small">CLICK YOUR CHARACTER GENDER (PROTAGONIST)</p><div id="protagonistChoices" class="choices"><button type="button" data-gender="boy">BOY</button><button type="button" data-gender="girl">GIRL</button></div><p class="small">Now choose your neighbor's gender.</p><div id="neighborChoices" class="choices"><button type="button" data-gender="boy">BOY</button><button type="button" data-gender="girl">GIRL</button></div><button id="continueCharacter" type="button" disabled>CONTINUE</button></section>
+    <section id="characterScreen" class="panel">
+      <p class="eyebrow">CREATE YOUR CHARACTER</p>
+      <h2>Who are you?</h2>
+      <p><strong>CLICK YOUR CHARACTER GENDER (PROTAGONIST)</strong></p>
+      <label>Your name <input id="playerName" maxlength="18" placeholder="Your name"></label>
+      <div id="protagonistChoices" class="choices"><button type="button" data-gender="boy">BOY</button><button type="button" data-gender="girl">GIRL</button></div>
+      <p class="small">Now choose your neighbor's gender.</p>
+      <div id="neighborChoices" class="choices"><button type="button" data-gender="boy">BOY</button><button type="button" data-gender="girl">GIRL</button></div>
+      <button id="continueCharacter" type="button" disabled>CONTINUE</button>
+    </section>
     <section id="worldScreen" class="panel worldPanel"><canvas id="world" aria-label="Ashwood 3D playable neighborhood"></canvas><div id="worldHint">WASD / ARROWS • MOVE &nbsp; E • INTERACT</div></section>
     <section id="sceneScreen" class="panel"><div id="sceneText"></div><div id="choices"></div></section>
     <section id="memoryScreen" class="panel"><p class="eyebrow">MEMORY FRAGMENT</p><div id="memoryText"></div><button id="returnParty" type="button">RETURN TO THE PARTY</button></section>
@@ -19,8 +28,13 @@
   </main>
   <div id="controls"><button id="boardBtn" type="button" disabled>CASE FILE</button><span>WASD / ARROWS: move • E: interact</span></div><div id="toast"></div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.min.js" onerror="this.onerror=function(){this.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r180/three.min.js'};this.src='https://unpkg.com/three@0.180.0/build/three.min.js'"></script>
-<script src="game.js?v=11"></script>
-<script src="character-setup.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.min.js"></script>
+<script>
+if(!window.THREE){document.write('<script src="https://unpkg.com/three@0.180.0/build/three.min.js"><\\/script>')}
+</script>
+<script>
+if(!window.THREE){document.write('<script src="https://raw.githubusercontent.com/mrdoob/three.js/r180/build/three.min.js"><\\/script>')}
+</script>
+<script src="game.js?v=12"></script>
 </body>
 </html>
