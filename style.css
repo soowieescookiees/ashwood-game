@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;600&display=swap');
+*{box-sizing:border-box}
+body{margin:0;background:#080808;color:#eee;font-family:Inter,Arial,sans-serif;min-height:100vh;overflow:hidden}
+button,input{font:inherit}
+button{cursor:pointer}
+#game{height:100vh;background:radial-gradient(circle at 50% 45%,#252018 0,#0b0b0b 48%,#030303 100%);position:relative}
+#screen{height:calc(100vh - 62px);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.panel{display:none;width:min(900px,92vw);max-height:88vh;overflow:auto;background:rgba(8,8,8,.82);border:1px solid #403a31;box-shadow:0 20px 80px #000;padding:42px;position:relative}
+.panel.active{display:block}
+#titleScreen{text-align:center;background:transparent;border:0;box-shadow:none}
+h1{font-family:Creepster,serif;font-size:clamp(80px,15vw,170px);letter-spacing:8px;margin:0;color:#eee;text-shadow:0 0 24px #000}
+h2{font-family:Creepster,serif;font-size:46px;letter-spacing:3px}
+h3{letter-spacing:2px;color:#c7b89d}
+.eyebrow{letter-spacing:5px;color:#a79a82;font-size:12px}
+.tagline{color:#aaa;font-style:italic;margin:0 0 38px}
+button{background:#151515;color:#eee;border:1px solid #5a5145;padding:13px 20px;letter-spacing:2px;transition:.2s}
+button:hover{background:#29251f;border-color:#a79678}
+#hud{height:62px;display:flex;align-items:center;gap:24px;padding:0 22px;border-bottom:1px solid #29251f;background:#090909;position:relative;z-index:5}
+.title{font-family:Creepster;font-size:28px;letter-spacing:3px}
+#objective{color:#a9a093;font-size:13px;flex:1}
+#clueCount{font-size:13px;color:#c6b99f}
+label{display:block;margin:24px 0 10px;color:#bbb}
+input{display:block;width:100%;max-width:420px;margin-top:9px;padding:13px;background:#111;color:#fff;border:1px solid #4b443a;outline:none}
+.choices{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.small{color:#999;margin-top:25px}
+#sceneText{line-height:1.8;font-size:17px;max-width:760px}
+#sceneText p{margin:0 0 18px}
+#choices{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+#memoryScreen{background:#050505;text-align:center;min-height:420px}
+#memoryText{font-family:Georgia,serif;font-size:22px;line-height:2;max-width:700px;margin:35px auto 45px;color:#c9c1b5}
+.boardHead{display:flex;justify-content:space-between;align-items:center}
+.boardGrid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.card{border:1px solid #3e3931;background:#111;padding:16px;margin:10px 0;color:#bbb;line-height:1.55}
+.card strong{color:#eee}
+#controls{height:62px;position:absolute;bottom:0;left:0;right:0;background:#080808;border-top:1px solid #29251f;display:flex;align-items:center;gap:20px;padding:0 22px;color:#777;font-size:12px}
+#boardBtn{padding:8px 12px;font-size:11px}
+#toast{position:absolute;bottom:82px;left:50%;transform:translateX(-50%);background:#15120f;border:1px solid #655b4c;padding:12px 18px;opacity:0;pointer-events:none;transition:.3s;color:#ddd}
+#toast.show{opacity:1}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:5px 5px}
+@media(max-width:650px){.panel{padding:25px}.boardGrid{grid-template-columns:1fr}#objective{display:none}#hud{gap:10px}}
